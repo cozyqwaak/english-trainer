@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой английский</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <span class="badge">ТВОЙ ЛИЧНЫЙ СЛОВАРЬ</span>
+
+    <h1>Маленький шаг.<br>Новое слово.</h1>
+
+    <p class="description">
+      Добавляй английские слова и учи их!
+    </p>
+
+    <label for="word">Английское слово</label>
+    <input id="word" type="text" placeholder="Например: purpose">
+
+    <label for="translation">Перевод</label>
+    <input id="translation" type="text" placeholder="Например: цель">
+
+    <button type="button">+ Добавить в словарь</button>
+    <label for="training-mode">Направление тренировки</label>
+
+<select id="training-mode">
+  <option value="en-ru">Английский → Русский</option>
+  <option value="ru-en">Русский → Английский</option>
+</select>
+    <button id="train-button" type="button">Начать тренировку</button>
+    <p id="dictionary-count" class="badge">Слов в словаре: 0</p>
+    <label for="search-word">Поиск по словарю</label>
+<input
+  id="search-word"
+  type="search"
+  placeholder="Введи слово или перевод"
+>   <button id="export-button" type="button">
+  Скачать копию словаря
+</button>
+<label for="import-file">Загрузить копию словаря</label>
+<input id="import-file" type="file" accept=".json">
+    <section id="training" hidden>
+  <h2>Проверь себя</h2>
+  <p id="score">Верно: 0 из 0</p>
+
+  <p>Напиши перевод слова:</p>
+  <h3 id="question-word"></h3>
+  <button id="speak-button" type="button">
+  🔊 Послушать произношение
+</button>
+
+  <label for="answer">Твой ответ</label>
+  <input
+    id="answer"
+    type="text"
+    placeholder="Введи перевод"
+    autocomplete="off"
+  >
+
+  <button id="check-button" type="button">Проверить</button>
+
+  <p id="result" aria-live="polite"></p>
+
+  <button id="next-button" type="button">Следующее слово</button>
+  <button id="finish-button" type="button">Закончить тренировку</button>
+</section>
+    <p class="note">Твой английский начинается с практики.</p>
+    <section id="summary" hidden>
+  <span class="badge">ТРЕНИРОВКА ЗАВЕРШЕНА</span>
+  <h2>Твой результат</h2>
+
+  <p id="summary-percent"></p>
+  <p id="summary-details"></p>
+<button id="mistakes-button" type="button" hidden>
+  Повторить ошибки
+</button>
+  <button id="restart-button" type="button">
+    Тренироваться ещё раз
+  </button>
+</section>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
